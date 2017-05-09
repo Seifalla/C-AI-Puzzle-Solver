@@ -7,8 +7,11 @@ Atomic Chaos is a tricky puzzle consisting of 6 tubes of different lengths arran
 Program execution instructions:
 
 •	This program runs on Linux 4.4.0-34-generic x86_64 (DMB 005)
-•	All the files must be in the same directory.
+
+•	All the files must be in the same directory
+
 •	Compile using the command: g++ atomic.cpp
+
 •	Run as: ./a.out
 
 
@@ -45,10 +48,15 @@ Each node will be represented by an object. The object consists of two arrays of
 Sample GUI Output:
 
 666666 000000
+
  55555 00000
+ 
   4444 0000
+  
    333 000
+   
     22 00
+    
      1 0
 
 h = 0
@@ -56,10 +64,15 @@ h = 0
 Enter the number of moves needed to randomize the puzzle: 47
 
     13 660000
+    
      4 55000
+     
 562666 0000
+
  44400 000
+ 
   3355 00
+  
    200 0
 
 h = 5
@@ -71,10 +84,15 @@ h = 5
 
 
 666666 000000
+
  55555 00000
+ 
   4444 0000
+  
    333 000
+   
     22 00
+    
      1 0
 
 h = 0
@@ -82,10 +100,15 @@ h = 0
 Enter the number of moves needed to randomize the puzzle: 63
 
 342666 000000
+
  55255 00000
+ 
   3163 0000
+  
    544 000
+   
     66 00
+    
      4 0
 
 h = 6
@@ -93,19 +116,33 @@ h = 6
 IDA* pseudocode:
 
 •	Create a new node
+
 •	Calculate its f value
+
 •	Add it to the priority queue
+
 •	Initialize depth to 0
+
 •	Loop until solved:
-•	Loop until the depth is reached
-•	Create a node 
-•	Node = first element in the frontier
-•	If this node contains the solved state: return true
-•	For each legal move:
-•	Create a child node
-•	Connect it to its parent
-•	Add it to the queue
-•	Increment the depth by one
+
+  •	Loop until the depth is reached
+  
+    •	Create a node 
+
+    •	Node = first element in the frontier
+    
+    •	If this node contains the solved state: return true
+
+    •	For each legal move:
+
+      •	Create a child node
+      
+      •	Connect it to its parent
+
+      •	Add it to the queue
+
+  •Increment the depth by one
+
 Delete the old queue and create a new one.
 
 Heuristic Evaluation Function:
